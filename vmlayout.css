@@ -1,0 +1,56 @@
+
+/* vmlayout */
+
+body {
+    font: normal 1em helvetica, arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    background: #eee;
+}
+
+#header, #footer {height:50px; padding:5px 5%; color:#fff; background: #777}
+#formdiv, #statediv {min-height: 600px;}
+#formdiv {background:#ccc;}
+#statediv, #container {background:#ddd;}
+
+#container {
+    max-width: 75em;
+    margin: 0 auto;
+}
+#formdiv {
+	float:left;
+	width:40%;
+	padding: 0 5% 1em 5%;
+}
+#statediv {
+	float:left;
+	width:40%;
+	padding: 0 5%
+}
+#footer {
+	clear:both;
+}
+
+#regtable {
+    background:#ccc;
+    width: 10em;
+	float: left;
+}
+
+#memtable {
+    background:#eee;
+    float: left;
+}
+
+th {
+    text-align:left;
+}
+
+.regName {
+    font-weight: bold;   
+}
+
+.highlight {
+    background:#ffc;
+}
+
