@@ -15,16 +15,18 @@
       
       <div id="formdiv">
 	<form id="asmin" method="GET">
-	  <p><textarea name="program" id="program" cols="60" rows="25"></textarea></p>
-	  <p>
-	    <input id="runButton" value="Run" type="button">
-	    <input id="resetButton" value="Reset" type="button">
-            <input id="stepButton" value="Step" type="button">
-	  </p>
+	  <div class="control-buttons">
+	    <input id="runButton" value="Run" type="button"><br>
+	    <input id="resetButton" value="Reset" type="button"><br>
+            <input id="stepButton" value="Step" type="button"><br>
+	  </div>
+	  <div>
+            <textarea name="program" id="program" cols="40" rows="25"></textarea>
+          </div>
 	</form>
 		
 	<pre>Errors:</pre><pre id="errlog"></pre>
-	<pre>Log messages:</pre><pre id="log"></pre>
+	<pre>Log:</pre><pre id="log"></pre>
       </div>
       
       <div id="statediv">

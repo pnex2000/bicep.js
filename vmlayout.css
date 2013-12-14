@@ -10,31 +10,37 @@ body {
 
 #header, #footer {height:50px; padding:5px 5%; color:#fff; background: #777}
 #formdiv, #statediv {min-height: 600px;}
-#formdiv {background:#ccc;}
 #statediv, #container {background:#ddd;}
 
 #container {
-    max-width: 75em;
+    max-width: 86%;
     margin: 0 auto;
 }
 #formdiv {
-	float:left;
-	width:40%;
-	padding: 0 5% 1em 5%;
+    float:left;
+    width:400px;
+    padding: 10px 15px 10px 15px;
+    background:#ccc;
 }
+
+.control-buttons {
+    float:left;
+    padding-top: 10px;
+    margin-right: 15px;
+}
+
 #statediv {
-	float:left;
-	width:40%;
-	padding: 0 5%
+    float:left;
+    padding: 0 5%
 }
 #footer {
-	clear:both;
+    clear:both;
 }
 
 #regtable {
     background:#ccc;
     width: 10em;
-	float: left;
+    float: left;
 }
 
 #memtable {
