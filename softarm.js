@@ -276,7 +276,7 @@ function runProgram(vm) {
       vm.executeOps(program)
     } catch (e) {
       //console.log('EXCEPTION: ' + e.name + '\nReason: ' + e.message + '\n')
-      updateErr('EXCEPTION: ' + e.name + '\nReason: ' + e.message + '\n')
+      updateLog('EXCEPTION: ' + e.name + '\nReason: ' + e.message + '\n')
     }
     displayRegs(vm);
     updateMemtable(vm.getMemCopy())
@@ -307,18 +307,12 @@ function stepProgram(vm) {
   }
 }
 
-// TODO these are only for status messages now, clean them at some point
 function updateLog(msg) {
   document.getElementById('log').textContent += msg
 }
 
-function updateErr(msg) {
-  document.getElementById('errlog').textContent = msg
-}
-
 function clearLogs() {
   document.getElementById('log').textContent = ''
-  document.getElementById('errlog').textContent = ''
 }
 
 function domLoaded() {
