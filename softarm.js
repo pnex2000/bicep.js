@@ -116,6 +116,11 @@ function createVm(vmconf) {
     },
 
     validMemAddress: function(addr) {
+      if (addr & 0x3)
+        throw {
+            name: 'AddressingException',
+            message: 'Address ' + addr + ' is not word aligned!'
+        }
       var offsetWords = (addr - vmconf.physMemOffset)>>2
       if (offsetWords < 0 || offsetWords > vmconf.memSizeWords)
         throw {
