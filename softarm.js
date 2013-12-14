@@ -234,14 +234,15 @@ var clearRegHighlights = function() {
 var drawMemtable = function() {
   var start = 0x20000000
   var end = start + 1024
+  var wordsPerRow = 8
   var memView = document.getElementById('memtable')
-  for (var i = start; i < end; i += 4<<2) {
+  for (var i = start; i < end; i += wordsPerRow << 2) {
     var tr = document.createElement('tr')
     memView.appendChild(tr)
     var td = document.createElement('td')
     tr.appendChild(td)
     td.appendChild(document.createTextNode(i.toString(16)))
-    for (var j=i; j < i+(4<<2); j+=4) {
+    for (var j=i; j < i+(wordsPerRow << 2); j+=4) {
       var td = document.createElement('td')
       tr.appendChild(td)
       td.appendChild(document.createTextNode('0'))
@@ -253,8 +254,9 @@ var updateMemtable = function(memValues) {
   var memView = document.getElementById('memtable')
   for (var i = 1; i < memView.children.length; i++) {
     var tr = memView.children[i]
+    var wordsPerRow = tr.children.length - 1
     for (var j = 1; j < tr.children.length; j++) {
-      tr.children[j].childNodes[0].data = memValues[(i-1)*4 + (j-1)]
+      tr.children[j].childNodes[0].data = memValues[(i-1) * wordsPerRow + (j-1)]
     }
   }
 }

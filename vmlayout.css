@@ -31,16 +31,18 @@ body {
 
 #statediv {
     float:left;
-    padding: 0 5%
+    padding: 10px 15px 10px 15px;
 }
+
 #footer {
     clear:both;
 }
 
 #regtable {
+    float: left;
     background:#ccc;
     width: 10em;
-    float: left;
+    margin-right: 15px;
 }
 
 #memtable {
